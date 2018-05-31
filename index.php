@@ -48,10 +48,10 @@ if (isset($rows['values'])) {
         }
 
         $data[] = [
-            'col-a' => $row[0],
-            'col-b' => $row[1],
-            'col-c' => $row[2],
-            'col-d' => $row[3],
+            'nombre' => $row[0],
+            'correo' => $row[1],
+            'cedula' => $row[2],
+            'edad' => $row[3],
         ];
 
         /*
@@ -70,7 +70,7 @@ if (isset($rows['values'])) {
             ['valueInputOption' => 'USER_ENTERED']
         );
         $currentRow++;
-        
+
     }
 }
 
