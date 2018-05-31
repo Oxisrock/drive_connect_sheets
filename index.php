@@ -33,7 +33,7 @@ $data = [];
 
 // The first row contains the column titles, so lets start pulling data from row 2
 $currentRow = 2;
-
+$count = 1;
 // The range of A2:H will get columns A through H and all rows starting from row 2
 $spreadsheetId = '1ZE-I59hGBsLrrt4Kar8R2avgmTntFX9DXHYNuYnvyFI';
 $range = 'A2:E';
@@ -52,16 +52,18 @@ if (isset($rows['values'])) {
             'correo' => $row[1],
             'cedula' => $row[2],
             'edad' => $row[3],
+            '# of call' => $row[4],
         ];
 
         /*
          * Now for each row we've seen, lets update the I column with the current date
          */
         $updateRange = 'E'.$currentRow;
+        $count = $count++;
         $updateBody = new \Google_Service_Sheets_ValueRange([
             'range' => $updateRange,
             'majorDimension' => 'ROWS',
-            'values' => ['values' => date('c')],
+            'values' => ['values' => $count],
         ]);
         $sheets->spreadsheets_values->update(
             $spreadsheetId,
@@ -70,7 +72,7 @@ if (isset($rows['values'])) {
             ['valueInputOption' => 'USER_ENTERED']
         );
         $currentRow++;
-
+        $count++;
     }
 }
 
