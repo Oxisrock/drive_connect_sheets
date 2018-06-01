@@ -1,0 +1,17 @@
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
+.fill { 
+    min-height: 100%;
+    height: 100%;
+}
+
+
+.fourthgradient {
+  background: linear-gradient(to left top, #B3C7C2, #B4D6CC, #C1E3D6, #CFEFE3, #D3F4EB)
+}
+
+
