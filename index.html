@@ -9,37 +9,38 @@
 <div class="container-fluid fourthgradient text-center fill">
 
     <div class="col-md-12"><h1 style="padding-top:3%;padding-bottom:3%;"> Insert the necessary data</h1>
-  
+
     </div>
     <div class="col-md-12">
-  
- 
- <form id="" action="" method="" enctype="text/plain"> 
- 
+
+
+ <form id="" action="form.php" method="post" name="form">
+
 	<div class="pretty p-switch p-fill">
-        <input type="checkbox" />
+        <input type="checkbox" name="new_call" value="new_call"/>
         <div class="state">
             <label><b>New call?</b></label>
         </div>
     </div><br><br><br><br><br><br>
-  
+
     <div class="pretty p-switch p-fill">
-        <input type="checkbox" />
+        <input type="checkbox" name="new_meeting"/>
         <div class="state">
             <label><b>New meeting?</b></label>
         </div>
     </div><br><br><br><br><br><br>
-  
+
     <div class="pretty p-switch p-fill">
-        <input type="checkbox" />
-        <div class="state">
+        <input type="checkbox" name="new_close_job"/>
+        <div class="state" >
             <label><b>New job closed?</b></label>
         </div>
     </div><br><br>	<br><br><br><br>
-	 </form>
-  
-  </div>       
+    <input type="submit" name="submit" value="SEND DATA">
+   </form>
+
+  </div>
 </div>
 
 </body>
-</html>       
+</html>
