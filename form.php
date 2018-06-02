@@ -7,9 +7,6 @@ use Google\Spreadsheet\ServiceRequestFactory;
 $new_call = isset($_POST['new_call']);
 $new_meeting = isset($_POST['new_meeting']);
 $new_close_job = isset($_POST['new_close_job']);
-$celda_call = $_POST['celda_call'];
-$celda_meeting = $_POST['celda_meeting'];
-$celda_close_job = $_POST['celda_job_close'];
 /*
  * We need to get a Google_Client object first to handle auth and api calls, etc.
  */
@@ -67,7 +64,7 @@ if (isset($rows['values'])) {
          * Now for each row we've seen, lets update the I column with the current date
          */
          if($new_call) {
-             $updateRange = 'E'.$celda_call;
+             $updateRange = 'E4';
              foreach ($data as $key) {
               $count_call = $key['#_of_call'];
              }
@@ -86,7 +83,7 @@ if (isset($rows['values'])) {
              );
            }
          if($new_meeting) {
-             $updateRange = 'F'.$celda_meeting;
+             $updateRange = 'F4';
              foreach ($data as $key) {
               $count_meeting = $key['#_of_client_meetings'];
              }
@@ -104,7 +101,7 @@ if (isset($rows['values'])) {
              );
            }
          if($new_close_job) {
-             $updateRange = 'G'.$celda_close_job;
+             $updateRange = 'G4';
              foreach ($data as $key) {
               $count_close_job = $key['#_of_jobs_closed'];
              }
