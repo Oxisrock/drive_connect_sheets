@@ -1,8 +1,9 @@
 <html>
 <head>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css" rel="stylesheet" media="screen">
-        <link href="custom.css" rel="stylesheet" media="screen">
+        <link href="assets/custom.css" rel="stylesheet" media="screen">
 		<link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet" media="screen">
+    <script src="assets/app.js" charset="utf-8"></script>
         <title>Jobs Tracking</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
 
 
  <form id="" action="form.php" method="post" name="form">
-   <input type="text" name="celda_call" value="" placeholder="Numero de celda">
+   <input type="text" name="celda_call" value="" placeholder="Numero de celda" disabled>
    <br>
    <br>
 	<div class="pretty p-switch p-fill">
@@ -24,16 +25,16 @@
             <label><b>New call?</b></label>
         </div>
     </div><br><br>
-    <input type="text" name="celda_meeting" value="" placeholder="Numero de celda">
+    <input type="text" name="celda_meeting" value="" placeholder="Numero de celda" disabled>
     <br>
     <br>
     <div class="pretty p-switch p-fill">
-        <input type="checkbox" name="new_meeting"/>
+        <input type="checkbox" name="new_meeting" onchange="myFunction()"/>
         <div class="state">
             <label><b>New meeting?</b></label>
         </div>
     </div><br><br>
-    <input type="text" name="celda_job_close" value="" placeholder="Numero de celda">
+    <input type="text" name="celda_job_close" value="" placeholder="Numero de celda" disabled>
     <br>
     <br>
     <div class="pretty p-switch p-fill">
