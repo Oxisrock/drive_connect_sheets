@@ -122,5 +122,3 @@ if (isset($rows['values'])) {
            $count++;
     }
 }
-
-var_dump($data);
